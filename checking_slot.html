@@ -1,0 +1,131 @@
+
+<!-- checking_slot.html -->
+
+<!DOCTYPE html>
+<html>
+<head><style>
+h1{font:italic bold 2.8em/1.2 arial,sans-serif}
+body{ background-size: 100% 150%;
+background-image:url("room1") ;
+opacity:0.8;
+
+background-repeat:no-repeat;}
+	 .checking_slot{
+border-radius:5px;
+width:400px;
+height:310px;
+background-color:#eee;
+padding:20px;
+margin:100px;
+margin-top:50px;
+}
+	 .booking_slot{
+border-radius:5px;
+width:400px;
+height:310px;
+background-color:#eee;
+padding:20px;
+margin:100px;
+margin-top:50px;
+}
+.date,.btn{font-size:18px;padding:4px;margin:5px; } 
+ul {
+  list-style-type: none;
+  margin:0;
+  overflow: hidden;
+  //background-color: white;
+  //border:1px solid black;
+padding:10px;font-size:20px;
+}
+
+
+ li {padding:10px;background-color:#5F9EA8;
+  border:5px solid white;
+  float: left;margin:10px;border-radius:50px;font-size:30px;
+
+  
+}
+
+ li a {border-radius:50px;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ li a:hover{
+  background-color: gray;
+}
+#right{float:right; margin-right:10px;}
+
+</style>
+
+	<title>Checking Slot Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<ul >
+<li ><a href="home.html">Home</a></li>
+
+
+
+</ul>
+</header>
+<center><h1>Room 1</h1></center>
+<center>
+<table>
+<tr><td>
+<div class="checking_slot" >
+	<center><h2>Checking Slot Form</h2></center>
+	<form action="check_slot.php" method="POST">
+		<label for="date" class="date" >Date :</label>
+		<input class="date" type="date" id="date" name="date" required><br>
+
+		<label for="time" class="date">Time :</label>
+		<select class="date" name="time"  id="time">
+			<option name="opt1">  09:00 A.M.-10:00 A.M. </option>
+			<option name="opt1">  10:00 A.M.-11:00 A.M. </option> 
+			<option name="opt2">  11:00 A.M.-12:00 P.M. </option> 
+			<option name="opt3">  12:00 P.M.-01:00 P.M. </option>
+			<option name="opt3">  01:00 P.M.-02:00 P.M. </option>
+		</select><br><br><center>
+		<input type="submit" value="Check Slot" class="btn" name="check_slot"><center>
+	</form>
+</div>
+</td>
+<td>
+<div class="booking_slot">
+<center><h2>Booking Slot Form</h2></center>
+	<form action="book_slot.php" method="post" >
+		<label for="name" class="date">  Event Name :</label>
+		<input type="text" class="date" id="nameofevent" name="nameofevent" required><br>
+
+		<label for="email" class="date"> Department &nbsp:</label>
+		<input type="text" class="date"  id="department" name="department" required><br>
+
+		<label for="phone" class="date" > Faculty Name : </label>
+		<input type="tel" id="name" name="name" class="date" required><br>
+
+		<label for="date" class="date"> Date :</label>
+		<input type="date" id="date" name="date" class="date" required><br>
+
+		<label for="time" class="date">Time :</label>
+		<select name="time"  id="time" class="date">
+			<option name="opt1">  09:00 A.M.-10:00 A.M. </option>
+			<option name="opt1">  10:00 A.M.-11:00 A.M. </option> 
+			<option name="opt2">  11:00 A.M.-12:00 P.M. </option> 
+			<option name="opt3">  12:00 P.M.-01:00 P.M. </option>
+			<option name="opt3">  01:00 P.M.-02:00 P.M. </option>
+		</select><br>
+	<center><input type="submit" class="btn" value="Book Slot"></center>
+	</form>
+</div>
+</td></tr></table>
+</center>
+</body>
+</html>
+
+
+ 
